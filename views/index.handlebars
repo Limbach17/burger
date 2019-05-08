@@ -1,43 +1,45 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Eat-da-Burger</a>
+  <a class="navbar-brand" href="#">
+    <img src="/assets/img/Burger-PNG-HD-Free-Vector-1024x1024.png" width="30" height="30" alt="lil-burger">
+  <a class="navbar-brand" href="/views/index.handlebars">Eat-da-Burger</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add a burger to the menu...</button>
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="input" placeholder="create" aria-label="create">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add a burger to the menu...</button>
     </form>
   </div>
 </nav>
 
-<img src="../public/assets/img/burger-banner_2011520.jpg" class="img-fluid" alt="Burger Banner" id="burger-banner">
+<img src="/assets/img/burger-banner_2011520.jpg" class="img-fluid" alt="Burger Banner" id="burger-banner">
 
 
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
             <h3>Burgers awaiting consumption</h3>
-            <ul class="list-group">
+            {{!-- <ul class="list-group">
                 {{#each burgers}}
                     {{#unless devoured}}
                     {{> burgers/burger-block devoured=true}}
                     {{/unless}}
                 {{/each}}
                 
-            </ul>
+            </ul> --}}
         </div>
 
         <div class="col-lg-6">
             <h3>Burgers downed</h3>
             <ul class="list-group">
-                {{#each burgers}}
+                {{!-- {{#each burgers}}
                     {{#if devoured}}
                     {{> burgers/burger-block devoured=false}}
                     {{/if}}
-                {{/each}}
+                {{/each}} --}}
             </ul>
 
         </div>
