@@ -17,6 +17,16 @@ VALUES ("Pittsburgher", false);
 INSERT INTO burgers (burger_name, devoured)
 VALUES ("Nothingburger", false);
 
+INSERT INTO burgers (burger_name, devoured)
+VALUES ("Whataburger", false);
+
+INSERT INTO burgers (burger_name, devoured)
+VALUES ("Wahlburger", false);
+
+INSERT INTO burgers (burger_name, devoured)
+VALUES ("Humburglar", false);
+
+
 SELECT * FROM burgers;
 
 ALTER USER 'tl7q0tlfq54keqv9'@'op2hpcwcbxb1t4z9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com' IDENTIFIED WITH mysql_native_password BY 'kmw87fjcsj92suzz'

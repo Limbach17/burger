@@ -10,9 +10,19 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     
     <form class="form-inline" id="create-form">
-        <input class="form-control mr-sm-2" type="input" placeholder="create" aria-label="create">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add a burger to the menu...</button>
+        <div class="form-group form-item">
+            <input type="text" class="form-control mr-sm-2" placeholder="create" aria-label-"create" id="ca" name="name">
+        </div>
+
+        <div class="form-group form-item">
+            <input class="form-item" type="radio" name="devoured" value="1" checked> Devoured!<br>
+            <input class="form-item" type="radio" name="devoured" value="0"> Ready to eat
+        </div>
+
+        <button class="btn btn-outline-success my-2 my-sm-0 form-item" type="submit">Add a burger to the menu...</button>
     </form>
+        {{!-- <input class="form-control mr-sm-2" type="input" placeholder="create" aria-label="create">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add a burger to the menu...</button> --}}
   </div>
 </nav>
 
@@ -26,7 +36,7 @@
             <ul class="list-group">
                 {{#each burgers}}
                     {{#unless devoured}}
-                    {{> burgers/burger-block devoured=true}}
+                        {{> burgers/burger-block devoured=true}}
                     {{/unless}}
                 {{/each}}
                 
@@ -38,7 +48,7 @@
             <ul class="list-group">
                 {{#each burgers}}
                     {{#if devoured}}
-                    {{> burgers/burger-block devoured=false}}
+                        {{> burgers/burger-block devoured=false}}
                     {{/if}}
                 {{/each}}
             </ul>
