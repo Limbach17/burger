@@ -26,44 +26,48 @@
 </nav>
 
 <div>
-<img src="/assets/img/Burger-banner.png" class="img-fluid" alt="Burger Banner" id="burger-banner">
-<div class="container-fluid">
+    <img src="/assets/img/Burger-banner.png" class="img-fluid" alt="Burger Banner" id="burger-banner">
     
-    
-    <div class="row">
-        <div class="col-lg-6">
-            <h3 class="p-3 mb-2 bg-transparent text-white">
-                <span class="border border-white">Burgers ready to eat</span>
-            </h3>
-            <div class="card overflow-auto">
-                <ul class="list-group">
-                    {{#each burgers}}
-                        {{#unless devoured}}
-                            {{> burgers/burger-block devoured=true}}
-                        {{/unless}}
-                    {{/each}}
-                </ul>
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <h3 class="p-3 mb-2 bg-transparent text-white">
+                    <span class="border border-white">Burgers ready to eat</span>
+                </h3>
+
+                <div class="card overflow-auto">
+                    <ul class="list-group">
+                        {{#each burgers}}
+                            {{#unless devoured}}
+                                {{> burgers/burger-block devoured=true}}
+                            {{/unless}}
+                        {{/each}}
+                    </ul>
+                    
+                </div>
                 
             </div>
-        </div>
 
-        <div class="col-lg-6">
-            <h3 class="p-3 mb-2 bg-transparent text-danger">
-                <span class="border border-danger">Burgers devoured</span>
-            </h3>
-            <div class="card overflow-auto">
-                <ul class="list-group">
-                    {{#each burgers}}
-                        {{#if devoured}}
-                            {{> burgers/burger-block devoured=false}}
-                        {{/if}}
-                    {{/each}}
-                </ul>
+            <div class="col-lg-6">
+                <h3 class="p-3 mb-2 bg-transparent text-danger">
+                    <span class="border border-danger">Burgers devoured</span>
+                </h3>
+
+                <div class="card overflow-auto">
+                    <ul class="list-group">
+                        {{#each burgers}}
+                            {{#if devoured}}
+                                {{> burgers/burger-block devoured=false}}
+                            {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+
             </div>
+            
         </div>
-        
     </div>
-</div>
 
 </div>
 
