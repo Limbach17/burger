@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
-  <a class="navbar-brand" href="https://github.com/Limbach17/burger">
-    <img src="/assets/img/Burger-PNG-HD-Free-Vector-1024x1024.png" width="30" height="30" alt="lil-burger">
+  <a class="navbar-brand" href="https://github.com/Limbach17/burger" id="eat-da-burger">
+    <img src="/assets/img/Burger-PNG-HD-Free-Vector-1024x1024.png" width="50" height="50" alt="lil-burger">
   </a>  
-  <a class="navbar-brand" href="#">Burger Jawn</a>
+  <a class="navbar-brand" href="https://github.com/Limbach17/burger">Burger Jawn</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -21,41 +21,63 @@
 
         <button class="btn btn-outline-success my-2 my-sm-0 form-item" type="submit">Add a burger to the menu...</button>
     </form>
-        {{!-- <input class="form-control mr-sm-2" type="input" placeholder="create" aria-label="create">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add a burger to the menu...</button> --}}
+        
   </div>
 </nav>
 
-{{!-- <img src="/assets/img/Burger-banner.png" class="img-fluid" alt="Burger Banner" id="burger-banner"> --}}
-
+<div>
+<img src="/assets/img/Burger-banner.png" class="img-fluid" alt="Burger Banner" id="burger-banner">
 <div class="container-fluid">
+    
     
     <div class="row">
         <div class="col-lg-6">
-            <h3>Burgers awaiting consumption</h3>
-            <ul class="list-group">
-                {{#each burgers}}
-                    {{#unless devoured}}
-                        {{> burgers/burger-block devoured=true}}
-                    {{/unless}}
-                {{/each}}
+            <h3 class="p-3 mb-2 bg-transparent text-white">
+                <span class="border border-white">Burgers ready to eat</span>
+            </h3>
+            <div class="card overflow-auto">
+                <ul class="list-group">
+                    {{#each burgers}}
+                        {{#unless devoured}}
+                            {{> burgers/burger-block devoured=true}}
+                        {{/unless}}
+                    {{/each}}
+                </ul>
                 
-            </ul>
+            </div>
         </div>
 
         <div class="col-lg-6">
-            <h3>Burgers downed</h3>
-            <ul class="list-group">
-                {{#each burgers}}
-                    {{#if devoured}}
-                        {{> burgers/burger-block devoured=false}}
-                    {{/if}}
-                {{/each}}
-            </ul>
-
+            <h3 class="p-3 mb-2 bg-transparent text-danger">
+                <span class="border border-danger">Burgers devoured</span>
+            </h3>
+            <div class="card overflow-auto">
+                <ul class="list-group">
+                    {{#each burgers}}
+                        {{#if devoured}}
+                            {{> burgers/burger-block devoured=false}}
+                        {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
         </div>
+        
     </div>
 </div>
+
+</div>
+
+<footer>
+    <p>Image credits:</p>
+    <ul>
+        <li>Thumbnail: <a href="https://peoplepng.com/burger-png-hd-free-vector/77460/free-vector" alt="People png">
+            People png
+            </a>
+        </li>
+        <li>Background: <a href="https://www.lynnesnissan.com/best-burgers-near-bloomfield-nj/burger-banner/"alt="Lynne's">
+        Lynnes Nissan</a></li>
+    </ul>
+</footer>
 
 
 

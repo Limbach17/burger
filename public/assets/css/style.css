@@ -1,6 +1,9 @@
 .container {
-    position: fixed;
-    float: top;
+    width: 100%;
+}
+.form-item{
+    padding: 5px;
+    margin: 5px;
 }
 
 #burger-banner {
@@ -11,10 +14,12 @@
     margin: 20px, 0px 20px 0px,
 }
 
-#nav {
-    margin-bottom: 20px;
-}
-
 #create-form {
     padding: 8px;
+}
+
+footer {
+    position: fixed;
+    margin-top: 725px;
+    font-size: small;
 }
