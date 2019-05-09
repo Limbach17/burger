@@ -1,4 +1,16 @@
+.container {
+    position: fixed;
+    float: top;
+}
+
 #burger-banner {
+    z-index: -1;
+    position: fixed;
+    float: top;
     width: 100%;
-    margin: 20px 0px 20px 0px;
+    margin: 20px, 0px 20px 0px,
+}
+
+#nav {
+    margin-bottom: 20px;
 }

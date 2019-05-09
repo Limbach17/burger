@@ -1,0 +1,14 @@
+<li class="list-group-item">
+	{{name}}
+
+	<button type="button" class="close delete-burger" aria-label="close" data-id="{{this.id}}">
+		<span aria-hidden="true">&times;</span>
+	</button>
+	<br>
+
+	<button class="btn btn-outline-danger change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
+		{{#if devoured}}DEVOURRR!{{else}}RE-ADD TO MENU!{{/if}}
+	</button>
+
+	
+</li>
