@@ -18,10 +18,11 @@
     padding: 8px;
 }
 
-footer {
+#credits {
+    z-index: -1;
     position: fixed;
-    margin-top: 55px;
-    font-size: small;
+    float: bottom;
+    margin-top: 800px;
 } 
 
 .card {
