@@ -4,6 +4,9 @@ var router = express.Router();
 
 var burger = require("../models/burger.js");
 
+// var devouredArray = [];
+// var menuArray = [];
+
 router.get("/", function(req, res) {
     burger.selectAll(function(data) {
       var hbsObject = {
@@ -13,6 +16,31 @@ router.get("/", function(req, res) {
       res.render("index", hbsObject);
     });
   });
+
+  router.get("/burgers/all", function(req, res) {
+    burger.selectAll(function(data) {
+      var hbsObject = {
+        burgers: data
+      };
+      res.json(hbsObject);
+    })
+  });
+
+  /* router.get("/burgers/devoured", function(req, res) {
+    burger.selectAll(function(data) {
+      var hbsObject = {
+        burgers:data
+      };
+
+      for (var i = 0; i < hbsObject.length; i++) {
+        var consumed;
+        if (hbsObject[i].devoured === 1) {
+          consumed += hbsObject[i];
+        }
+        return res.json(consumed);
+      }
+    })
+  }); */
 
 router.post("/api/burgers", function(req, res) {
   burger.create([
